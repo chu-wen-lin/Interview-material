@@ -10,7 +10,7 @@
 #### 2. schema-free: doesn't require a pre-defined schema like relational database does.
 
 ### Query
-####1. Read
+#### 1. Read
 |operator|example|
 |---|---|
 |less than|{'age': {$lt: 20}}|
