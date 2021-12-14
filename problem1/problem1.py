@@ -6,7 +6,7 @@ from typing import Union
 
 os.chdir('../data')
 filename_list = glob.glob(r'*_lvr_land_a.csv')
-df_list = [(pd.read_csv(filename)).drop(0) for filename in filename_list]  # remove english header
+df_list = [(pd.read_csv(filename, skiprows=[1])) for filename in filename_list]  # remove english header
 df_all = pd.concat(df_list, axis=0, ignore_index=True)
 
 
